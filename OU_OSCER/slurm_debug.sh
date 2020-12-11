@@ -9,7 +9,7 @@
 #SBATCH --job-name=debug_CPP_Birdtracker
 #SBATCH --mail-user=test@ou.edu
 #SBATCH --mail-type=ALL
-#SBATCH --chdir=/scratch/whoneyc
+#SBATCH --chdir=/scratch/%u
 #
 ################################################
 
