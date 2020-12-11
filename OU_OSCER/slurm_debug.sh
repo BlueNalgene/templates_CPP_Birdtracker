@@ -7,9 +7,9 @@
 #SBATCH --error=jobname_%J_stderr.txt
 #SBATCH --time=00:05:00
 #SBATCH --job-name=debug_CPP_Birdtracker
-#SBATCH --mail-user=honeycutt@ou.edu
+#SBATCH --mail-user=test@ou.edu
 #SBATCH --mail-type=ALL
-#SBATCH --chdir=/scratch/$USER
+#SBATCH --chdir=/scratch/whoneyc
 #
 ################################################
 
