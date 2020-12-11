@@ -7,9 +7,9 @@
 #SBATCH --error=jobname_%J_stderr.txt
 #SBATCH --time=00:05:00
 #SBATCH --job-name=debug_CPP_Birdtracker
-#SBATCH --mail-user=test@ou.edu
+#SBATCH --mail-user=ENTER EMAIL HERE
 #SBATCH --mail-type=ALL
-#SBATCH --chdir=/scratch/%u
+#SBATCH --chdir=/scratch/ENTER USERNAME HERE
 #
 ################################################
 
@@ -17,8 +17,8 @@
 set -eou pipefail
 
 #### Create a new output directory based on this script
-mkdir birdtracker_$SLURM_JOB_ID
-cd birdtracker_$SLURM_JOB_ID
+WORKDIR=/scratch/$USER/birdtracker_$SLURM_JOB_ID
+mkdir -p $WORKDIR && cd $WORKDIR || exit -1
 
 #### Assign variables for the program, video, etc
 VIDEO_FILE=/scratch/whoneyc/1524943548outA_cut_cut.mp4
