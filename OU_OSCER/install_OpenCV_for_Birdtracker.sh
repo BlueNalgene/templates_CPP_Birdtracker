@@ -25,18 +25,18 @@ cd build
 module load binutils CMake FFmpeg
 
 # Configure cmake with the options we need
-# This takes a few minutes, get a coffee
 cmake \
+-DBUILD_PNG=ON \
 -DCMAKE_CXX17_COMPILE_FEATURES=cxx_std_17 \
 -DCMAKE_BUILD_TYPE=Release \
 -DCMAKE_INSTALL_PREFIX=~/OpenCV_shared \
 -DOPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules/ ..
 
 # Make across 24 threads (don't use -j24 for normal computers!)
-# this command takes a few minutes, 
 make -j24
 
 # Install what we made
+# This command takes a few minutes. Grab a coffee
 make install
 
 # Return to the original directory so the user doesn't get lost and confused.
