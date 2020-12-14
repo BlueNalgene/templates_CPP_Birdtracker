@@ -38,5 +38,5 @@ export LD_LIBRARY_PATH=$HOME/OpenCV_shared/lib64:$LD_LIBRARY_PATH
 
 #### Run Program
 echo "started script: $(date +%s.%3N -u)"
-$PROG -i $VIDEO_FILE -c $CONFIG_PATH
+/usr/bin/time -v $PROG -i $VIDEO_FILE -c $CONFIG_PATH
 echo "completed job: $(date +%s.%3N -u)" 
