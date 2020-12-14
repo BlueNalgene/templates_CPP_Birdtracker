@@ -3,13 +3,12 @@
 #SBATCH --partition=debug_5min
 #SBATCH --ntasks=1
 #SBATCH --mem=4000
-#SBATCH --output=jobname_%J_stdout.txt
-#SBATCH --error=jobname_%J_stderr.txt
+#SBATCH --output=/scratch/%u/jobname_%J_stdout.txt
+#SBATCH --error=/scratch/%u/jobname_%J_stderr.txt
 #SBATCH --time=00:05:00
 #SBATCH --job-name=debug_CPP_Birdtracker
-#SBATCH --mail-user=ENTER EMAIL HERE
+#SBATCH --mail-user=
 #SBATCH --mail-type=ALL
-#SBATCH --chdir=/scratch/ENTER USERNAME HERE
 #
 ################################################
 
